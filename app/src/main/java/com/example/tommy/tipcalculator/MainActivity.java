@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 
     private final TextWatcher amountEditTextWatcher = new TextWatcher()
     {
-        //called when the user modifies the bill amoount
+        //called when the user modifies the bill amount
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count)
         {
@@ -129,11 +129,11 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        //called when the user modifies the bill amoount
+        //called when the user modifies the bill amount
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count)
         {
-            try // get tax amount and display currency formatted value
+            try // get tax amount and display percent formatted value
             {
                 tax = Double.parseDouble(s.toString())/ 100.0;
                 taxTextView.setText(percentFormat.format(tax));
